@@ -16,7 +16,7 @@ const BookUpdate = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9999/api/book/${id}`)
+      .get(`http://localhost:8000/api/book/${id}`)
       .then((res) => {
         console.log(res.data);
         setTitle(res.data.title);
@@ -49,7 +49,7 @@ const BookUpdate = () => {
     e.preventDefault();
 
     axios
-      .put(`http://localhost:9999/api/book/${id}`, {
+      .put(`http://localhost:8000/api/book/${id}`, {
         title,
         author,
         pages,

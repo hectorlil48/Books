@@ -10,7 +10,7 @@ const BookDetails = () => {
   const navigate = useNavigate();
 
   const deleteBook = () => {
-    axios.delete(`http://localhost:9999/api/book/${id}`).then((res) => {
+    axios.delete(`http://localhost:8000/api/book/${id}`).then((res) => {
       console.log(res.data);
       navigate("/");
     });
@@ -18,7 +18,7 @@ const BookDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:9999/api/book/${id}`)
+      .get(`http://localhost:8000/api/book/${id}`)
       .then((res) => {
         console.log(res.data);
         setBook(res.data);

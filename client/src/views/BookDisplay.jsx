@@ -7,7 +7,7 @@ const BookDisplay = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:9999/api/book")
+      .get("http://localhost:8000/api/book")
       .then((res) => {
         console.log(res.data);
         setBooks(res.data);
